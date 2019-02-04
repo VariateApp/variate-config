@@ -1,0 +1,25 @@
+{
+    "main_navigation": {
+        "id": 0,
+        "variations":[
+            {
+                "id": 0,
+                "control": true,
+                "traffic_allocation": 50,
+                "attributes": {
+                    "heroImageSrc": "image.png",
+                    "heroImageHeight": "100%"
+                }
+            },
+            {
+                "id": 1,
+                "control": false,
+                "traffic_allocation": 50,
+                "attributes": {
+                    "heroImageSrc": "image2.png",
+                    "heroImageHeight": "150%"
+                }
+            }
+        ]
+    }
+}
