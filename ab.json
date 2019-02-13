@@ -3,22 +3,18 @@
         "bucketed": {
             "min": 0,
             "max": 40,
-            "buckets": [ // 2 buckets for now
+            "buckets": [
                 {
                     "min": 0,
                     "max": 20,
-                    "experiments": [
-                        { "id": "hero-bg-image" }
-                    ]
+                    "experiments": []
                 },
                 {
                     "min": 21,
                     "max": 40,
                     "experiments": [
-                        { "id": "hero-bg-button" },
                         {
                             "id": 1,
-                            "status": "draft", // draft or live
                             "traffic_allocation": {
                                 "min": 0,
                                 "max": 50
@@ -107,7 +103,6 @@
                         },
                         {
                             "id": 2,
-                            "status": "draft", // draft or live
                             "traffic_allocation": {
                                 "min": 0,
                                 "max": 50
@@ -190,19 +185,20 @@
                                             }
                                         }
                                     }
-                                },
-                                {}
+                                }
                             ]
                         }
                     ]
                 }
             ]
         },
-
-        // Target 100% of the traffic
         "experiments": [
             {
                 "id": 0,
+                "traffic_allocation": {
+                    "min": 0,
+                    "max": 50
+                },
                 "targeting": {
                     "views": [
                         {
@@ -220,7 +216,7 @@
                     ],
                     "audiences": {
                         "parameters": ["location", "platform", "location", "range"],
-                        "include": [ // 10
+                        "include": [
                             {
                                 "id": 0,
                                 "parameters": {
@@ -245,7 +241,7 @@
                                 }
                             }
                         ],
-                        "exclude": [ // max: 10
+                        "exclude": [
                             {
                                 "id": 2,
                                 "parameters": {
@@ -290,32 +286,27 @@
                                 }
                             }
                         }
-                    },
-                    {}
+                    }
                 ]
             }
         ]
     },
     "draft": {
-        "traffic": {
+        "bucketed": {
             "min": 0,
             "max": 40,
-            "buckets": [ // 2 buckets for now
+            "buckets": [
                 {
                     "min": 0,
                     "max": 20,
-                    "experiments": [
-                        { "id": "hero-bg-image" }
-                    ]
+                    "experiments": []
                 },
                 {
                     "min": 21,
                     "max": 40,
                     "experiments": [
-                        { "id": "hero-bg-button" },
                         {
                             "id": 1,
-                            "status": "draft", // draft or live
                             "traffic_allocation": {
                                 "min": 0,
                                 "max": 50
@@ -398,13 +389,11 @@
                                             }
                                         }
                                     }
-                                },
-                                {}
+                                }
                             ]
                         },
                         {
                             "id": 2,
-                            "status": "draft", // draft or live
                             "traffic_allocation": {
                                 "min": 0,
                                 "max": 50
@@ -487,8 +476,7 @@
                                             }
                                         }
                                     }
-                                },
-                                {}
+                                }
                             ]
                         }
                     ]
@@ -496,11 +484,13 @@
             ]
         },
 
-        // Target 100% of the traffic
         "experiments": [
             {
                 "id": 0,
-                "status": "draft", // draft or live
+                "traffic_allocation": {
+                    "min": 0,
+                    "max": 50
+                },
                 "targeting": {
                     "views": [
                         {
@@ -579,8 +569,7 @@
                                 }
                             }
                         }
-                    },
-                    {}
+                    }
                 ]
             }
         ]
