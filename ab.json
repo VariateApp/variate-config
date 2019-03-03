@@ -12,247 +12,77 @@
                 {
                     "min": 21,
                     "max": 40,
-                    "experiments": [
-                        {
-                            "id": 1,
-                            "traffic_allocation": {
-                                "min": 0,
-                                "max": 50
-                            },
-                            "targeting": {
-                                "views": [
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/product"
-                                    },
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/blog"
-                                    },
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/bonzai"
-                                    }
-                                ],
-                                "audiences": {
-                                    "parameters": [""],
-                                    "include": [
-                                        {
-                                            "id": 0,
-                                            "parameters": {
-                                                "location": "Canada",
-                                                "platform": "Android"
-                                            }
-                                        },
-                                        {
-                                            "id": 1,
-                                            "parameters": {
-                                                "location": "Germany",
-                                                "platform": "iOS"
-                                            }
-                                        }
-                                    ],
-                                    "exclude": [
-                                        {
-                                            "id": 2,
-                                            "parameters": {
-                                                "viewport": "<280px"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            "variations": [
-                                {
-                                    "traffic_allocation": {
-                                        "min": 0,
-                                        "max": 50
-                                    },
-                                    "components": {
-                                        "Hero": {
-                                            "id": 0,
-                                            "attributes": {
-                                                "heroImageSrc": "https://images.unsplash.com/photo-1513147122760-ad1d5bf68cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80",
-                                                "heroImageHeight": "500px",
-                                                "heroButtonColor": "red"
-                                            }
-                                        },
-                                        "HeroPrimaryCTA": {
-                                            "id": 2,
-                                            "attributes": {
-                                                "visible": false,
-                                                "color": "red",
-                                                "width": "150px",
-                                                "borderColor": "red",
-                                                "backgroundColor": "red"
-                                            }
-                                        },
-                                        "HeroSecondaryCTA": {
-                                            "id": 3,
-                                            "attributes": {
-                                                "color": "red",
-                                                "width": "150px",
-                                                "borderColor": "palevioletred",
-                                                "backgroundColor": "palevioletred"
-                                            }
-                                        }
-                                    }
-                                },
-                                {}
-                            ]
-                        },
-                        {
-                            "id": 2,
-                            "traffic_allocation": {
-                                "min": 0,
-                                "max": 50
-                            },
-                            "targeting": {
-                                "views": [
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/product"
-                                    },
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/blog"
-                                    },
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/bonzai"
-                                    }
-                                ],
-                                "audiences": {
-                                    "parameters": [""],
-                                    "include": [
-                                        {
-                                            "id": 0,
-                                            "parameters": {
-                                                "location": "Canada",
-                                                "platform": "Android"
-                                            }
-                                        },
-                                        {
-                                            "id": 1,
-                                            "parameters": {
-                                                "location": "Germany",
-                                                "platform": "iOS"
-                                            }
-                                        }
-                                    ],
-                                    "exclude": [
-                                        {
-                                            "id": 2,
-                                            "parameters": {
-                                                "viewport": "<280px"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            "variations": [
-                                {
-                                    "traffic_allocation": {
-                                        "min": 0,
-                                        "max": 50
-                                    },
-                                    "components": {
-                                        "Hero": {
-                                            "id": 0,
-                                            "attributes": {
-                                                "heroImageSrc": "https://images.unsplash.com/photo-1513147122760-ad1d5bf68cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80",
-                                                "heroImageHeight": "500px",
-                                                "heroButtonColor": "red"
-                                            }
-                                        },
-                                        "HeroPrimaryCTA": {
-                                            "id": 2,
-                                            "attributes": {
-                                                "visible": false,
-                                                "color": "red",
-                                                "width": "150px",
-                                                "borderColor": "red",
-                                                "backgroundColor": "red"
-                                            }
-                                        },
-                                        "HeroSecondaryCTA": {
-                                            "id": 3,
-                                            "attributes": {
-                                                "color": "red",
-                                                "width": "150px",
-                                                "borderColor": "palevioletred",
-                                                "backgroundColor": "palevioletred"
-                                            }
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                    "experiments": []
                 }
             ]
         },
         "experiments": [
             {
                 "id": 0,
-                "traffic_allocation": {
-                    "min": 0,
-                    "max": 50
-                },
+                "name": "Live-About",
                 "targeting": {
-                    "views": [
-                        {
-                            "type": "simple-match",
-                            "pattern": "/product"
-                        },
-                        {
-                            "type": "simple-match",
-                            "pattern": "/blog"
-                        },
-                        {
-                            "type": "simple-match",
-                            "pattern": "/bonzai"
-                        }
-                    ],
-                    "audiences": {
-                        "parameters": ["location", "platform", "location", "range"],
+                    "views": {
+                        "exclude": [],
+                        "include": [
+                            "/about"
+                        ]
+                    },
+                    "segments": {
                         "include": [
                             {
-                                "id": 0,
-                                "parameters": {
-                                    "location": ["Canada", "USA"],
-                                    "platform": "Android"
-                                }
+                                "type": "string",
+                                "field": "platform",
+                                "operator": "=",
+                                "value": "iOS"
                             },
+                            "OR",
                             {
-                                "id": 1,
-                                "parameters": {
-                                    "location": "France",
-                                    "platform": ["iOS", "Android"]
-                                }
+                                "type": "number",
+                                "field": "viewport",
+                                "operator": ">",
+                                "value": 0
                             },
+                            "OR",
                             {
-                                "id": 3,
-                                "parameters": {
-                                    "range": {
-                                        "min": 1,
-                                        "max": 100
-                                    }
+                                "type": "number",
+                                "field": "viewport",
+                                "operator": "<",
+                                "value": 100
+                            },
+                            "OR",
+                            {
+                                "type": "boolean",
+                                "field": "authenticated",
+                                "operator": "=",
+                                "value": true
+                            },
+                            "OR",
+                            {
+                                "type": "custom",
+                                "field": "custom-field",
+                                "callback": "function(expect, value) {}"
+                            },
+                            "AND",
+                            [
+                                {
+                                    "field": "state",
+                                    "operator": "=",
+                                    "value": "Washington"
+                                },
+                                "OR",
+                                {
+                                    "field": "state",
+                                    "operator": "=",
+                                    "value": "California"
                                 }
-                            }
+                            ]
                         ],
-                        "exclude": [
-                            {
-                                "id": 2,
-                                "parameters": {
-                                    "viewport": "<280px"
-                                }
-                            }
-                        ]
+                        "exclude": []
                     }
                 },
                 "variations": [
                     {
+                        "id": 0,
                         "traffic_allocation": {
                             "min": 0,
                             "max": 50
@@ -304,241 +134,120 @@
                 {
                     "min": 21,
                     "max": 40,
-                    "experiments": [
-                        {
-                            "id": 1,
-                            "traffic_allocation": {
-                                "min": 0,
-                                "max": 50
-                            },
-                            "targeting": {
-                                "views": [
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/product"
-                                    },
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/blog"
-                                    },
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/bonzai"
-                                    }
-                                ],
-                                "audiences": {
-                                    "parameters": [""],
-                                    "include": [
-                                        {
-                                            "id": 0,
-                                            "parameters": {
-                                                "location": "Canada",
-                                                "platform": "Android"
-                                            }
-                                        },
-                                        {
-                                            "id": 1,
-                                            "parameters": {
-                                                "location": "Germany",
-                                                "platform": "iOS"
-                                            }
-                                        }
-                                    ],
-                                    "exclude": [
-                                        {
-                                            "id": 2,
-                                            "parameters": {
-                                                "viewport": "<280px"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            "variations": [
-                                {
-                                    "traffic_allocation": {
-                                        "min": 0,
-                                        "max": 50
-                                    },
-                                    "components": {
-                                        "Hero": {
-                                            "id": 0,
-                                            "attributes": {
-                                                "heroImageSrc": "https://images.unsplash.com/photo-1513147122760-ad1d5bf68cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80",
-                                                "heroImageHeight": "500px",
-                                                "heroButtonColor": "red"
-                                            }
-                                        },
-                                        "HeroPrimaryCTA": {
-                                            "id": 2,
-                                            "attributes": {
-                                                "visible": false,
-                                                "color": "red",
-                                                "width": "150px",
-                                                "borderColor": "red",
-                                                "backgroundColor": "red"
-                                            }
-                                        },
-                                        "HeroSecondaryCTA": {
-                                            "id": 3,
-                                            "attributes": {
-                                                "color": "red",
-                                                "width": "150px",
-                                                "borderColor": "palevioletred",
-                                                "backgroundColor": "palevioletred"
-                                            }
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "id": 2,
-                            "traffic_allocation": {
-                                "min": 0,
-                                "max": 50
-                            },
-                            "targeting": {
-                                "views": [
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/product"
-                                    },
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/blog"
-                                    },
-                                    {
-                                        "type": "simple-match",
-                                        "pattern": "/bonzai"
-                                    }
-                                ],
-                                "audiences": {
-                                    "parameters": [""],
-                                    "include": [
-                                        {
-                                            "id": 0,
-                                            "parameters": {
-                                                "location": "Canada",
-                                                "platform": "Android"
-                                            }
-                                        },
-                                        {
-                                            "id": 1,
-                                            "parameters": {
-                                                "location": "Germany",
-                                                "platform": "iOS"
-                                            }
-                                        }
-                                    ],
-                                    "exclude": [
-                                        {
-                                            "id": 2,
-                                            "parameters": {
-                                                "viewport": "<280px"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            "variations": [
-                                {
-                                    "traffic_allocation": {
-                                        "min": 0,
-                                        "max": 50
-                                    },
-                                    "components": {
-                                        "Hero": {
-                                            "id": 0,
-                                            "attributes": {
-                                                "heroImageSrc": "https://images.unsplash.com/photo-1513147122760-ad1d5bf68cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80",
-                                                "heroImageHeight": "500px",
-                                                "heroButtonColor": "red"
-                                            }
-                                        },
-                                        "HeroPrimaryCTA": {
-                                            "id": 2,
-                                            "attributes": {
-                                                "visible": false,
-                                                "color": "red",
-                                                "width": "150px",
-                                                "borderColor": "red",
-                                                "backgroundColor": "red"
-                                            }
-                                        },
-                                        "HeroSecondaryCTA": {
-                                            "id": 3,
-                                            "attributes": {
-                                                "color": "red",
-                                                "width": "150px",
-                                                "borderColor": "palevioletred",
-                                                "backgroundColor": "palevioletred"
-                                            }
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                    "experiments": []
                 }
             ]
         },
-
         "experiments": [
             {
-                "id": 0,
-                "traffic_allocation": {
-                    "min": 0,
-                    "max": 50
-                },
+                "id": 1,
+                "name": "Draft-About",
                 "targeting": {
-                    "views": [
-                        {
-                            "type": "simple-match",
-                            "pattern": "/product"
-                        },
-                        {
-                            "type": "simple-match",
-                            "pattern": "/blog"
-                        },
-                        {
-                            "type": "simple-match",
-                            "pattern": "/bonzai"
-                        }
-                    ],
-                    "audiences": {
-                        "parameters": [""],
+                    "views": {
+                        "exclude": [],
+                        "include": [
+                            "/about"
+                        ]
+                    },
+                    "segments": {
                         "include": [
                             {
-                                "id": 0,
-                                "parameters": {
-                                    "location": "Canada",
-                                    "platform": "Android"
-                                }
+                                "type": "string",
+                                "field": "platform",
+                                "operator": "=",
+                                "value": "iOS"
                             },
+                            "OR",
                             {
-                                "id": 1,
-                                "parameters": {
-                                    "location": "Germany",
-                                    "platform": "iOS"
+                                "type": "number",
+                                "field": "viewport",
+                                "operator": ">",
+                                "value": 0
+                            },
+                            "OR",
+                            {
+                                "type": "number",
+                                "field": "viewport",
+                                "operator": "<",
+                                "value": 100
+                            },
+                            "OR",
+                            {
+                                "type": "boolean",
+                                "field": "authenticated",
+                                "operator": "=",
+                                "value": true
+                            },
+                            "OR",
+                            {
+                                "type": "custom",
+                                "field": "custom-field",
+                                "callback": "function(expect, value) {}"
+                            },
+                            "AND",
+                            [
+                                {
+                                    "field": "state",
+                                    "operator": "=",
+                                    "value": "Washington"
+                                },
+                                "OR",
+                                {
+                                    "field": "state",
+                                    "operator": "=",
+                                    "value": "California"
                                 }
-                            }
+                            ]
                         ],
                         "exclude": [
                             {
-                                "id": 2,
-                                "parameters": {
-                                    "viewport": "<280px"
-                                }
+                                "field": "state",
+                                "operator": "=",
+                                "value": "Alberta"
+                            },
+                            "OR",
+                            {
+                                "field": "city",
+                                "opp": "=",
+                                "val": "Los Angeles"
                             }
                         ]
                     }
                 },
                 "variations": [
                     {
+                        "id": 1,
                         "traffic_allocation": {
                             "min": 0,
                             "max": 50
+                        },
+                        "components": {
+                            "HeroPrimaryCTA": {
+                                "id": 2,
+                                "attributes": {
+                                    "visible": false,
+                                    "color": "red",
+                                    "width": "150px",
+                                    "borderColor": "red",
+                                    "backgroundColor": "red"
+                                }
+                            },
+                            "HeroSecondaryCTA": {
+                                "id": 3,
+                                "attributes": {
+                                    "color": "red",
+                                    "width": "150px",
+                                    "borderColor": "palevioletred",
+                                    "backgroundColor": "palevioletred"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "traffic_allocation": {
+                            "min": 51,
+                            "max": 100
                         },
                         "components": {
                             "Hero": {
@@ -552,7 +261,7 @@
                             "HeroPrimaryCTA": {
                                 "id": 2,
                                 "attributes": {
-                                    "visible": false,
+                                    "visible": true,
                                     "color": "red",
                                     "width": "150px",
                                     "borderColor": "red",
