@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://variate.ca/definitions/experiment.json",
+    "type": "object",
+    "title": "Experiment Schema",
+    "required": [
+        "id",
+        "name",
+        "status",
+        "targeting",
+        "variations"
+    ],
+    "properties": {
+        "id": {
+            "$ref": "https://variate.ca/definitions/id.json",
+            "title": "Experiment ID"
+        },
+        "name": {
+            "type": "string",
+            "title": "Experiment Name",
+            "default": "",
+            "examples": [
+                "Homepage - Hero Banner"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "status": {
+            "$ref": "https://variate.ca/definitions/status.json"
+        },
+        "targeting": {
+            "type": "object",
+            "title": "Experiment Targeting Schema",
+            "required": [
+                "views",
+                "audiences"
+            ],
+            "properties": {
+                "views": {
+                    "$ref": "https://variate.ca/definitions/views.json"
+                },
+                "audiences": {
+                    "$ref": "https://variate.ca/definitions/audiences.json"
+                }
+            }
+        },
+        "variations": {
+            "type": "array",
+            "title": "Experiment Variations Schema",
+            "items": {
+                "$ref": "https://variate.ca/definitions/variation.json"
+            }
+        }
+    }
+}

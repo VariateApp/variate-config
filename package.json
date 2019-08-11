@@ -1,10 +1,11 @@
 {
   "name": "variate-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Variate configuration schema and example",
   "main": "config.json",
   "scripts": {
-    "validate": "ajv -s config.schema.json -d config.json"
+    "validate": "ajv -r 'src/definitions/**/*.json' -s src/variate.schema.json -d src/variate.json",
+    "docs": "jsonschema2md -d src/ -o docs/"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/variateapp/variate-config#readme",
   "devDependencies": {
+    "@adobe/jsonschema2md": "^3.1.2",
     "ajv-cli": "^3.0.0"
   }
 }

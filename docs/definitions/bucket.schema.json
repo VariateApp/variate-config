@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://variate.ca/definitions/bucket.json",
+    "type": "object",
+    "title": "Bucket definition",
+    "required": [
+        "min",
+        "max",
+        "experiments"
+    ],
+    "properties": {
+        "min": {
+            "$ref": "https://variate.ca/definitions/percentage.json"
+        },
+        "max": {
+            "$ref": "https://variate.ca/definitions/percentage.json"
+        },
+        "experiments": {
+            "type": "array",
+            "title": "Experiments",
+            "items": {
+                "$ref": "https://variate.ca/definitions/experiment.json"
+            }
+        }
+    }
+}

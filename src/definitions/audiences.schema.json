@@ -1,0 +1,6 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://variate.ca/definitions/audiences.json",
+    "type": "object",
+    "title": "Audiences schema (uses json logic)"
+}

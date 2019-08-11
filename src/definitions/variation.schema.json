@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://variate.ca/definitions/variation.json",
+    "type": "object",
+    "title": "Variation schema",
+    "required": [
+        "id",
+        "traffic_allocation",
+        "components"
+    ],
+    "properties": {
+        "id": {
+            "$ref": "https://variate.ca/definitions/id.json",
+            "title": "Variation ID"
+        },
+        "traffic_allocation": {
+            "$ref": "https://variate.ca/definitions/traffic.json"
+        },
+        "components": {
+            "type": "object",
+            "title": "Component list",
+            "additionalProperties": {
+                "$ref": "https://variate.ca/definitions/component.json"
+            }
+        }
+    }
+}

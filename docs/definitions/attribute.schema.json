@@ -1,0 +1,6 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://variate.ca/definitions/attribute.json",
+    "type": "object",
+    "title": "Attribute schema (can be any key value pair)"
+}
