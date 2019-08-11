@@ -8,8 +8,20 @@ This repository shows an example of a JSON configuration file to use with Variat
 $ npm install
 ```
 
-## Validate config.json against config.schema.json
+## Validate example against schema
 
 ```bash
 $ npm run validate
 ```
+
+## Generate documentation
+
+```bash
+$ npm run docs
+```
+
+## Hooks
+
+### Pre-commit
+
+`npm run validate` & `npm run docs` will be ran before each commit.
