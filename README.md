@@ -24,4 +24,4 @@ $ npm run docs
 
 ### Pre-commit
 
-`npm run validate` & `npm run docs` will be ran before each commit.
+`npm run validate` will be ran before each commit.
