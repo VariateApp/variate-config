@@ -2,7 +2,10 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/config.schema.json",
     "type": "object",
-    "title": "Variate configuration file schema.",
+    "meta:status": "beta",
+    "meta:license": "MIT",
+    "title": "Variate",
+    "description": "JSON Schema to define how the Variate config.json file should look like.",
     "required": [
         "live",
         "draft"

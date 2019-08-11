@@ -1,20 +1,22 @@
-# Variate configuration file schema. Schema
+# Variate Schema
 
 ```
 https://variate.ca/config.schema.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                 |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------ |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [variate.schema.json](variate.schema.json) |
+JSON Schema to define how the Variate config.json file should look like.
 
-# Variate configuration file schema. Properties
+| Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                 |
+| ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ------------------------------------------ |
+| Can be instantiated | No         | Beta   | No           | Forbidden         | Permitted             | [variate.schema.json](variate.schema.json) |
 
-| Property        | Type     | Required     | Nullable | Defined by                                       |
-| --------------- | -------- | ------------ | -------- | ------------------------------------------------ |
-| [draft](#draft) | `object` | **Required** | No       | Variate configuration file schema. (this schema) |
-| [live](#live)   | `object` | **Required** | No       | Variate configuration file schema. (this schema) |
-| `*`             | any      | Additional   | Yes      | this schema _allows_ additional properties       |
+# Variate Properties
+
+| Property        | Type     | Required     | Nullable | Defined by                                 |
+| --------------- | -------- | ------------ | -------- | ------------------------------------------ |
+| [draft](#draft) | `object` | **Required** | No       | Variate (this schema)                      |
+| [live](#live)   | `object` | **Required** | No       | Variate (this schema)                      |
+| `*`             | any      | Additional   | Yes      | this schema _allows_ additional properties |
 
 ## draft
 
