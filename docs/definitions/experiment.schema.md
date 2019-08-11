@@ -1,29 +1,32 @@
-# Experiment Schema Schema
+# Experiment Schema
 
 ```
 https://variate.ca/definitions/experiment.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                   |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------ |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [definitions/experiment.schema.json](experiment.schema.json) |
+The experiment object contains the experiment ID, name, status, targeting information and list of variations included
+in this experiment.
+
+| Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                                   |
+| ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------ |
+| Can be instantiated | No         | Draft  | No           | Forbidden         | Permitted             | [definitions/experiment.schema.json](experiment.schema.json) |
 
 ## Schema Hierarchy
 
-- Experiment Schema `https://variate.ca/definitions/experiment.json`
-  - [id.schema](id.schema.md) `https://variate.ca/definitions/id.json`
-  - [Experiment status schema](status.schema.md) `https://variate.ca/definitions/status.json`
+- Experiment `https://variate.ca/definitions/experiment.json`
+  - [ID](id.schema.md) `https://variate.ca/definitions/id.json`
+  - [Status](status.schema.md) `https://variate.ca/definitions/status.json`
 
-# Experiment Schema Properties
+# Experiment Properties
 
-| Property                  | Type                     | Required     | Nullable | Default                                    | Defined by                      |
-| ------------------------- | ------------------------ | ------------ | -------- | ------------------------------------------ | ------------------------------- |
-| [id](#id)                 | id.schema                | **Required** | No       |                                            | Experiment Schema (this schema) |
-| [name](#name)             | `string`                 | **Required** | No       | `""`                                       | Experiment Schema (this schema) |
-| [status](#status)         | Experiment status schema | **Required** | No       |                                            | Experiment Schema (this schema) |
-| [targeting](#targeting)   | `object`                 | **Required** | No       |                                            | Experiment Schema (this schema) |
-| [variations](#variations) | Variation schema         | **Required** | No       |                                            | Experiment Schema (this schema) |
-| `*`                       | any                      | Additional   | Yes      | this schema _allows_ additional properties |
+| Property                  | Type      | Required     | Nullable | Default                                    | Defined by               |
+| ------------------------- | --------- | ------------ | -------- | ------------------------------------------ | ------------------------ |
+| [id](#id)                 | ID        | **Required** | No       |                                            | Experiment (this schema) |
+| [name](#name)             | `string`  | **Required** | No       | `""`                                       | Experiment (this schema) |
+| [status](#status)         | Status    | **Required** | No       |                                            | Experiment (this schema) |
+| [targeting](#targeting)   | `object`  | **Required** | No       |                                            | Experiment (this schema) |
+| [variations](#variations) | Variation | **Required** | No       |                                            | Experiment (this schema) |
+| `*`                       | any       | Additional   | Yes      | this schema _allows_ additional properties |
 
 ## id
 
@@ -32,12 +35,12 @@ https://variate.ca/definitions/experiment.json
 `id`
 
 - is **required**
-- type: id.schema
+- type: ID
 - defined in this schema
 
 ### id Type
 
-- [id.schema](id.schema.md) – `https://variate.ca/definitions/id.json`
+- [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
 
 ## name
 
@@ -73,12 +76,12 @@ All instances must conform to this regular expression
 `status`
 
 - is **required**
-- type: Experiment status schema
+- type: Status
 - defined in this schema
 
 ### status Type
 
-- [Experiment status schema](status.schema.md) – `https://variate.ca/definitions/status.json`
+- [Status](status.schema.md) – `https://variate.ca/definitions/status.json`
 
 ## targeting
 
@@ -94,32 +97,32 @@ All instances must conform to this regular expression
 
 `object` with following properties:
 
-| Property    | Type                               | Required     |
-| ----------- | ---------------------------------- | ------------ |
-| `audiences` | Audiences schema (uses json logic) | **Required** |
-| `views`     | View schema                        | **Required** |
+| Property    | Type      | Required     |
+| ----------- | --------- | ------------ |
+| `audiences` | Audiences | **Required** |
+| `views`     | Views     | **Required** |
 
 #### audiences
 
 `audiences`
 
 - is **required**
-- type: Audiences schema (uses json logic)
+- type: Audiences
 
 ##### audiences Type
 
-- [Audiences schema (uses json logic)](audiences.schema.md) – `https://variate.ca/definitions/audiences.json`
+- [Audiences](audiences.schema.md) – `https://variate.ca/definitions/audiences.json`
 
 #### views
 
 `views`
 
 - is **required**
-- type: View schema
+- type: Views
 
 ##### views Type
 
-- [View schema](views.schema.md) – `https://variate.ca/definitions/views.json`
+- [Views](views.schema.md) – `https://variate.ca/definitions/views.json`
 
 ## variations
 
@@ -128,13 +131,13 @@ All instances must conform to this regular expression
 `variations`
 
 - is **required**
-- type: Variation schema
+- type: Variation
 - defined in this schema
 
 ### variations Type
 
-Array type: Variation schema
+Array type: Variation
 
 All items must be of the type:
 
-- [Variation schema](variation.schema.md) – `https://variate.ca/definitions/variation.json`
+- [Variation](variation.schema.md) – `https://variate.ca/definitions/variation.json`

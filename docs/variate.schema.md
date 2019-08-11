@@ -48,48 +48,48 @@ https://variate.ca/config.schema.json
 
 `object` with following properties:
 
-| Property  | Type              | Required     |
-| --------- | ----------------- | ------------ |
-| `buckets` | array             | **Required** |
-| `max`     | percentage.schema | **Required** |
-| `min`     | percentage.schema | **Required** |
+| Property  | Type       | Required     |
+| --------- | ---------- | ------------ |
+| `buckets` | array      | **Required** |
+| `max`     | Percentage | **Required** |
+| `min`     | Percentage | **Required** |
 
 #### buckets
 
 `buckets`
 
 - is **required**
-- type: Bucket definition
+- type: Bucket
 
 ##### buckets Type
 
-Array type: Bucket definition
+Array type: Bucket
 
 All items must be of the type:
 
-- [Bucket definition](definitions/bucket.schema.md) – `https://variate.ca/definitions/bucket.json`
+- [Bucket](definitions/bucket.schema.md) – `https://variate.ca/definitions/bucket.json`
 
 #### max
 
 `max`
 
 - is **required**
-- type: percentage.schema
+- type: Percentage
 
 ##### max Type
 
-- [percentage.schema](definitions/percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
+- [Percentage](definitions/percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
 
 #### min
 
 `min`
 
 - is **required**
-- type: percentage.schema
+- type: Percentage
 
 ##### min Type
 
-- [percentage.schema](definitions/percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
+- [Percentage](definitions/percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
 
 #### experiments
 
@@ -98,15 +98,15 @@ All items must be of the type:
 `experiments`
 
 - is **required**
-- type: Experiment Schema
+- type: Experiment
 
 ##### experiments Type
 
-Array type: Experiment Schema
+Array type: Experiment
 
 All items must be of the type:
 
-- [Experiment Schema](definitions/experiment.schema.md) – `https://variate.ca/definitions/experiment.json`
+- [Experiment](definitions/experiment.schema.md) – `https://variate.ca/definitions/experiment.json`
 
 ## live
 
@@ -140,48 +140,48 @@ All items must be of the type:
 
 `object` with following properties:
 
-| Property  | Type              | Required     |
-| --------- | ----------------- | ------------ |
-| `buckets` | array             | **Required** |
-| `max`     | percentage.schema | **Required** |
-| `min`     | percentage.schema | **Required** |
+| Property  | Type       | Required     |
+| --------- | ---------- | ------------ |
+| `buckets` | array      | **Required** |
+| `max`     | Percentage | **Required** |
+| `min`     | Percentage | **Required** |
 
 #### buckets
 
 `buckets`
 
 - is **required**
-- type: Bucket definition
+- type: Bucket
 
 ##### buckets Type
 
-Array type: Bucket definition
+Array type: Bucket
 
 All items must be of the type:
 
-- [Bucket definition](definitions/bucket.schema.md) – `https://variate.ca/definitions/bucket.json`
+- [Bucket](definitions/bucket.schema.md) – `https://variate.ca/definitions/bucket.json`
 
 #### max
 
 `max`
 
 - is **required**
-- type: percentage.schema
+- type: Percentage
 
 ##### max Type
 
-- [percentage.schema](definitions/percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
+- [Percentage](definitions/percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
 
 #### min
 
 `min`
 
 - is **required**
-- type: percentage.schema
+- type: Percentage
 
 ##### min Type
 
-- [percentage.schema](definitions/percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
+- [Percentage](definitions/percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
 
 #### experiments
 
@@ -190,12 +190,12 @@ All items must be of the type:
 `experiments`
 
 - is **required**
-- type: Experiment Schema
+- type: Experiment
 
 ##### experiments Type
 
-Array type: Experiment Schema
+Array type: Experiment
 
 All items must be of the type:
 
-- [Experiment Schema](definitions/experiment.schema.md) – `https://variate.ca/definitions/experiment.json`
+- [Experiment](definitions/experiment.schema.md) – `https://variate.ca/definitions/experiment.json`

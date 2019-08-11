@@ -2,7 +2,10 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/definitions/experiment.json",
     "type": "object",
-    "title": "Experiment Schema",
+    "meta:status": "draft",
+    "meta:license": "MIT",
+    "title": "Experiment",
+    "description": "The experiment object contains the experiment ID, name, status, targeting information and list of variations included in this experiment.",
     "required": [
         "id",
         "name",
@@ -50,5 +53,6 @@
                 "$ref": "https://variate.ca/definitions/variation.json"
             }
         }
-    }
+    },
+    "additionalProperties": true
 }

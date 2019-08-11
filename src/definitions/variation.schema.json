@@ -2,7 +2,10 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/definitions/variation.json",
     "type": "object",
-    "title": "Variation schema",
+    "meta:status": "draft",
+    "meta:license": "MIT",
+    "title": "Variation",
+    "description": "The variation object contains the variation ID, traffic allocation information and the list of components for this variation.",
     "required": [
         "id",
         "traffic_allocation",
@@ -23,5 +26,6 @@
                 "$ref": "https://variate.ca/definitions/component.json"
             }
         }
-    }
+    },
+    "additionalProperties": true
 }

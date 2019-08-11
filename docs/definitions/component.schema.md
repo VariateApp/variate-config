@@ -1,26 +1,27 @@
-# Component schema Schema
+# Component Schema
 
 ```
 https://variate.ca/definitions/component.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                 |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [definitions/component.schema.json](component.schema.json) |
+Component ID along with its list of attributes.
+
+| Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                                 |
+| ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
+| Can be instantiated | No         | Draft  | No           | Forbidden         | Forbidden             | [definitions/component.schema.json](component.schema.json) |
 
 ## Schema Hierarchy
 
-- Component schema `https://variate.ca/definitions/component.json`
-  - [id.schema](id.schema.md) `https://variate.ca/definitions/id.json`
-  - [Attribute schema (can be any key value pair)](attribute.schema.md) `https://variate.ca/definitions/attribute.json`
+- Component `https://variate.ca/definitions/component.json`
+  - [ID](id.schema.md) `https://variate.ca/definitions/id.json`
+  - [Attribute](attribute.schema.md) `https://variate.ca/definitions/attribute.json`
 
-# Component schema Properties
+# Component Properties
 
-| Property                  | Type                                         | Required     | Nullable | Defined by                                 |
-| ------------------------- | -------------------------------------------- | ------------ | -------- | ------------------------------------------ |
-| [attributes](#attributes) | Attribute schema (can be any key value pair) | **Required** | No       | Component schema (this schema)             |
-| [id](#id)                 | id.schema                                    | **Required** | No       | Component schema (this schema)             |
-| `*`                       | any                                          | Additional   | Yes      | this schema _allows_ additional properties |
+| Property                  | Type      | Required     | Nullable | Defined by              |
+| ------------------------- | --------- | ------------ | -------- | ----------------------- |
+| [attributes](#attributes) | Attribute | **Required** | No       | Component (this schema) |
+| [id](#id)                 | ID        | **Required** | No       | Component (this schema) |
 
 ## attributes
 
@@ -29,12 +30,12 @@ https://variate.ca/definitions/component.json
 `attributes`
 
 - is **required**
-- type: Attribute schema (can be any key value pair)
+- type: Attribute
 - defined in this schema
 
 ### attributes Type
 
-- [Attribute schema (can be any key value pair)](attribute.schema.md) – `https://variate.ca/definitions/attribute.json`
+- [Attribute](attribute.schema.md) – `https://variate.ca/definitions/attribute.json`
 
 ## id
 
@@ -43,9 +44,9 @@ https://variate.ca/definitions/component.json
 `id`
 
 - is **required**
-- type: id.schema
+- type: ID
 - defined in this schema
 
 ### id Type
 
-- [id.schema](id.schema.md) – `https://variate.ca/definitions/id.json`
+- [ID](id.schema.md) – `https://variate.ca/definitions/id.json`

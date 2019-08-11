@@ -1,14 +1,16 @@
-# Schema
+# Percentage Schema
 
 ```
 https://variate.ca/definitions/percentage.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                   |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------ |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [definitions/percentage.schema.json](percentage.schema.json) |
+Percentage value type. Can be an integer of a float, must be a multiple of 0.01 and must be between 0 and 100.
 
-## Examples
+| Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                                   |
+| ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------ |
+| Can be instantiated | No         | Stable | No           | Forbidden         | Permitted             | [definitions/percentage.schema.json](percentage.schema.json) |
+
+## Percentage Examples
 
 ```json
 0

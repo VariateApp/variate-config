@@ -1,8 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/definitions/bucket.json",
+    "meta:status": "stable",
+    "meta:license": "MIT",
     "type": "object",
-    "title": "Bucket definition",
+    "title": "Bucket",
+    "description": "Special bucket of traffic for canary experiment (experiment ran on a reduced percentage of traffic regardless of targeting.",
     "required": [
         "min",
         "max",
@@ -22,5 +25,6 @@
                 "$ref": "https://variate.ca/definitions/experiment.json"
             }
         }
-    }
+    },
+    "additionalProperties": false
 }

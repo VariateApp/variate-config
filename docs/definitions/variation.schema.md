@@ -1,27 +1,30 @@
-# Variation schema Schema
+# Variation Schema
 
 ```
 https://variate.ca/definitions/variation.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                 |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [definitions/variation.schema.json](variation.schema.json) |
+The variation object contains the variation ID, traffic allocation information and the list of components for this
+variation.
+
+| Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                                 |
+| ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
+| Can be instantiated | No         | Draft  | No           | Forbidden         | Permitted             | [definitions/variation.schema.json](variation.schema.json) |
 
 ## Schema Hierarchy
 
-- Variation schema `https://variate.ca/definitions/variation.json`
-  - [id.schema](id.schema.md) `https://variate.ca/definitions/id.json`
-  - [Traffic allocation schema](traffic.schema.md) `https://variate.ca/definitions/traffic.json`
+- Variation `https://variate.ca/definitions/variation.json`
+  - [ID](id.schema.md) `https://variate.ca/definitions/id.json`
+  - [Traffic](traffic.schema.md) `https://variate.ca/definitions/traffic.json`
 
-# Variation schema Properties
+# Variation Properties
 
-| Property                                  | Type                      | Required     | Nullable | Defined by                                 |
-| ----------------------------------------- | ------------------------- | ------------ | -------- | ------------------------------------------ |
-| [components](#components)                 | `object`                  | **Required** | No       | Variation schema (this schema)             |
-| [id](#id)                                 | id.schema                 | **Required** | No       | Variation schema (this schema)             |
-| [traffic_allocation](#traffic_allocation) | Traffic allocation schema | **Required** | No       | Variation schema (this schema)             |
-| `*`                                       | any                       | Additional   | Yes      | this schema _allows_ additional properties |
+| Property                                  | Type     | Required     | Nullable | Defined by                                 |
+| ----------------------------------------- | -------- | ------------ | -------- | ------------------------------------------ |
+| [components](#components)                 | `object` | **Required** | No       | Variation (this schema)                    |
+| [id](#id)                                 | ID       | **Required** | No       | Variation (this schema)                    |
+| [traffic_allocation](#traffic_allocation) | Traffic  | **Required** | No       | Variation (this schema)                    |
+| `*`                                       | any      | Additional   | Yes      | this schema _allows_ additional properties |
 
 ## components
 
@@ -48,21 +51,21 @@ https://variate.ca/definitions/variation.json
 `id`
 
 - is **required**
-- type: id.schema
+- type: ID
 - defined in this schema
 
 ### id Type
 
-- [id.schema](id.schema.md) – `https://variate.ca/definitions/id.json`
+- [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
 
 ## traffic_allocation
 
 `traffic_allocation`
 
 - is **required**
-- type: Traffic allocation schema
+- type: Traffic
 - defined in this schema
 
 ### traffic_allocation Type
 
-- [Traffic allocation schema](traffic.schema.md) – `https://variate.ca/definitions/traffic.json`
+- [Traffic](traffic.schema.md) – `https://variate.ca/definitions/traffic.json`

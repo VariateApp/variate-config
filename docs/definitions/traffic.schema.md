@@ -1,50 +1,51 @@
-# Traffic allocation schema Schema
+# Traffic Schema
 
 ```
 https://variate.ca/definitions/traffic.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                             |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------ |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [definitions/traffic.schema.json](traffic.schema.json) |
+The traffic object contains a minimum and maximum percentage of traffic.
+
+| Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                             |
+| ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------ |
+| Can be instantiated | No         | Stable | No           | Forbidden         | Forbidden             | [definitions/traffic.schema.json](traffic.schema.json) |
 
 ## Schema Hierarchy
 
-- Traffic allocation schema `https://variate.ca/definitions/traffic.json`
-  - [percentage.schema](percentage.schema.md) `https://variate.ca/definitions/percentage.json`
+- Traffic `https://variate.ca/definitions/traffic.json`
+  - [Percentage](percentage.schema.md) `https://variate.ca/definitions/percentage.json`
 
-# Traffic allocation schema Properties
+# Traffic Properties
 
-| Property    | Type              | Required     | Nullable | Defined by                                 |
-| ----------- | ----------------- | ------------ | -------- | ------------------------------------------ |
-| [max](#max) | percentage.schema | **Required** | No       | Traffic allocation schema (this schema)    |
-| [min](#min) | percentage.schema | **Required** | No       | Traffic allocation schema (this schema)    |
-| `*`         | any               | Additional   | Yes      | this schema _allows_ additional properties |
+| Property    | Type       | Required     | Nullable | Defined by            |
+| ----------- | ---------- | ------------ | -------- | --------------------- |
+| [max](#max) | Percentage | **Required** | No       | Traffic (this schema) |
+| [min](#min) | Percentage | **Required** | No       | Traffic (this schema) |
 
 ## max
 
-### Minimum traffic allowed.
+### Minimum traffic percentage allowed.
 
 `max`
 
 - is **required**
-- type: percentage.schema
+- type: Percentage
 - defined in this schema
 
 ### max Type
 
-- [percentage.schema](percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
+- [Percentage](percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
 
 ## min
 
-### Maximum traffic allowed.
+### Maximum traffic percentage allowed.
 
 `min`
 
 - is **required**
-- type: percentage.schema
+- type: Percentage
 - defined in this schema
 
 ### min Type
 
-- [percentage.schema](percentage.schema.md) – `https://variate.ca/definitions/percentage.json`
+- [Percentage](percentage.schema.md) – `https://variate.ca/definitions/percentage.json`

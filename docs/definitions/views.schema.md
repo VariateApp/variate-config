@@ -1,20 +1,22 @@
-# View schema Schema
+# Views Schema
 
 ```
 https://variate.ca/definitions/views.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                         |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------- |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [definitions/views.schema.json](views.schema.json) |
+The views object contains two arrays: include and exclude. Each array contains a list of urls or regular expressions to
+include or exclude from targeting.
 
-# View schema Properties
+| Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                         |
+| ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | -------------------------------------------------- |
+| Can be instantiated | No         | Draft  | No           | Forbidden         | Forbidden             | [definitions/views.schema.json](views.schema.json) |
 
-| Property            | Type       | Required     | Nullable | Defined by                                 |
-| ------------------- | ---------- | ------------ | -------- | ------------------------------------------ |
-| [exclude](#exclude) | `string[]` | **Required** | No       | View schema (this schema)                  |
-| [include](#include) | `string[]` | **Required** | No       | View schema (this schema)                  |
-| `*`                 | any        | Additional   | Yes      | this schema _allows_ additional properties |
+# Views Properties
+
+| Property            | Type       | Required     | Nullable | Defined by          |
+| ------------------- | ---------- | ------------ | -------- | ------------------- |
+| [exclude](#exclude) | `string[]` | **Required** | No       | Views (this schema) |
+| [include](#include) | `string[]` | **Required** | No       | Views (this schema) |
 
 ## exclude
 

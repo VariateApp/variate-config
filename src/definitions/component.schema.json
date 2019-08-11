@@ -1,8 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/definitions/component.json",
+    "meta:status": "draft",
+    "meta:license": "MIT",
     "type": "object",
-    "title": "Component schema",
+    "title": "Component",
+    "description": "Component ID along with its list of attributes.",
     "required": [
         "id",
         "attributes"
@@ -16,5 +19,6 @@
             "$ref": "https://variate.ca/definitions/attribute.json",
             "title": "Attributes object"
         }
-    }
+    },
+    "additionalProperties": false
 }
