@@ -8,15 +8,14 @@ JSON Schema to define how the Variate config.json file should look like.
 
 | Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                 |
 | ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ------------------------------------------ |
-| Can be instantiated | No         | Beta   | No           | Forbidden         | Permitted             | [variate.schema.json](variate.schema.json) |
+| Can be instantiated | No         | Beta   | No           | Forbidden         | Forbidden             | [variate.schema.json](variate.schema.json) |
 
 # Variate Properties
 
-| Property        | Type     | Required     | Nullable | Defined by                                 |
-| --------------- | -------- | ------------ | -------- | ------------------------------------------ |
-| [draft](#draft) | `object` | **Required** | No       | Variate (this schema)                      |
-| [live](#live)   | `object` | **Required** | No       | Variate (this schema)                      |
-| `*`             | any      | Additional   | Yes      | this schema _allows_ additional properties |
+| Property        | Type     | Required     | Nullable | Defined by            |
+| --------------- | -------- | ------------ | -------- | --------------------- |
+| [draft](#draft) | `object` | **Required** | No       | Variate (this schema) |
+| [live](#live)   | `object` | **Required** | No       | Variate (this schema) |
 
 ## draft
 
