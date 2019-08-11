@@ -1,0 +1,333 @@
+{
+    "definitions": {
+        "id": {
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                999
+            ]
+        },
+        "percentage": {
+            "type": "number",
+            "multipleOf": 0.1,
+            "minimum": 0,
+            "maximum": 100,
+            "default": 0,
+            "examples": [
+                0,
+                33.33,
+                100
+            ]
+        },
+        "status": {
+            "type": "string",
+            "title": "Experiment status schema",
+            "default": "",
+            "examples": [
+                "live",
+                "draft"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "bucket": {
+            "type": "object",
+            "title": "Bucket definition",
+            "required": [
+                "min",
+                "max",
+                "experiments"
+            ],
+            "properties": {
+                "min": {
+                    "$ref": "#/definitions/percentage"
+                },
+                "max": {
+                    "$ref": "#/definitions/percentage"
+                },
+                "experiments": {
+                    "type": "array",
+                    "title": "Experiments",
+                    "items": {
+                        "$ref": "#/definitions/experiment"
+                    }
+                }
+            }
+        },
+        "views": {
+            "type": "object",
+            "title": "View schema",
+            "required": [
+                "include",
+                "exclude"
+            ],
+            "properties": {
+                "include": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/targeting/properties/views/properties/include",
+                    "type": "array",
+                    "items": {
+                        "$id": "#/properties/live/properties/experiments/items/properties/targeting/properties/views/properties/include/items",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "/$"
+                        ],
+                        "pattern": "^(.*)$"
+                    }
+                },
+                "exclude": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/targeting/properties/views/properties/exclude",
+                    "type": "array",
+                    "items": {
+                        "$id": "#/properties/live/properties/experiments/items/properties/targeting/properties/views/properties/include/items",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "/$"
+                        ],
+                        "pattern": "^(.*)$"
+                    }
+                }
+            }
+        },
+        "audiences": {
+            "type": "object",
+            "title": "Audiences schema (uses json logic)"
+        },
+        "traffic_allocation": {
+            "type": "object",
+            "title": "Traffic allocation schema",
+            "required": [
+                "max",
+                "min"
+            ],
+            "properties": {
+                "max": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/variations/items/properties/traffic_allocation/properties/max",
+                    "$ref": "#/definitions/percentage",
+                    "title": "Minimum traffic allowed."
+                },
+                "min": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/variations/items/properties/traffic_allocation/properties/min",
+                    "$ref": "#/definitions/percentage",
+                    "title": "Maximum traffic allowed."
+                }
+            }
+        },
+        "component": {
+            "type": "object",
+            "title": "The Hero Schema",
+            "required": [
+                "id",
+                "attributes"
+            ],
+            "properties": {
+                "id": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/variations/items/properties/components/properties/Hero/properties/id",
+                    "$ref": "#/definitions/id",
+                    "title": "Component ID"
+                },
+                "attributes": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/variations/items/properties/components/properties/Hero/properties/attributes",
+                    "type": "object",
+                    "title": "The Attributes Schema"
+                }
+            }
+        },
+        "variation": {
+            "type": "object",
+            "title": "Variation schema",
+            "required": [
+                "id",
+                "traffic_allocation",
+                "components"
+            ],
+            "properties": {
+                "id": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/variations/items/properties/id",
+                    "$ref": "#/definitions/id",
+                    "title": "Variation ID"
+                },
+                "traffic_allocation": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/variations/items/properties/traffic_allocation",
+                    "$ref": "#/definitions/traffic_allocation"
+                },
+                "components": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/variations/items/properties/components",
+                    "type": "object",
+                    "title": "The Components Schema",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/component"
+                    }
+                }
+            }
+        },
+        "experiment": {
+            "type": "object",
+            "title": "Experiment Schema",
+            "required": [
+                "id",
+                "name",
+                "status",
+                "targeting",
+                "variations"
+            ],
+            "properties": {
+                "id": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/id",
+                    "$ref": "#/definitions/id",
+                    "title": "Experiment ID"
+                },
+                "name": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/name",
+                    "type": "string",
+                    "title": "Experiment Name",
+                    "default": "",
+                    "examples": [
+                        "Homepage - Hero Banner"
+                    ],
+                    "pattern": "^(.*)$"
+                },
+                "status": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/status",
+                    "$ref": "#/definitions/status"
+                },
+                "targeting": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/targeting",
+                    "type": "object",
+                    "title": "Experiment Targeting Schema",
+                    "required": [
+                        "views",
+                        "audiences"
+                    ],
+                    "properties": {
+                        "views": {
+                            "$id": "#/properties/live/properties/experiments/items/properties/targeting/properties/views",
+                            "$ref": "#/definitions/views"
+                        },
+                        "audiences": {
+                            "$id": "#/properties/live/properties/experiments/items/properties/targeting/properties/audiences",
+                            "$ref": "#/definitions/audiences"
+                        }
+                    }
+                },
+                "variations": {
+                    "$id": "#/properties/live/properties/experiments/items/properties/variations",
+                    "type": "array",
+                    "title": "Experiment Variations Schema",
+                    "items": {
+                        "$id": "#/properties/live/properties/experiments/items/properties/variations/items",
+                        "$ref": "#/definitions/variation"
+                    }
+                }
+            }
+        }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://variate/config.schema.json",
+    "type": "object",
+    "title": "Variate configuration file schema.",
+    "required": [
+        "live",
+        "draft"
+    ],
+    "properties": {
+        "live": {
+            "$id": "#/properties/live",
+            "type": "object",
+            "title": "Live experiments bucketed or audience-wide.",
+            "required": [
+                "bucketed",
+                "experiments"
+            ],
+            "properties": {
+                "bucketed": {
+                    "$id": "#/properties/live/properties/bucketed",
+                    "type": "object",
+                    "title": "Use bucketed experiments to run experiments on a subset of your traffic.",
+                    "required": [
+                        "min",
+                        "max",
+                        "buckets"
+                    ],
+                    "properties": {
+                        "min": {
+                            "$id": "#/properties/live/properties/bucketed/properties/min",
+                            "$ref": "#/definitions/percentage"
+                        },
+                        "max": {
+                            "$id": "#/properties/live/properties/bucketed/properties/max",
+                            "$ref": "#/definitions/percentage"
+                        },
+                        "buckets": {
+                            "$id": "#/properties/live/properties/bucketed/properties/buckets",
+                            "type": "array",
+                            "title": "The Buckets Schema",
+                            "items": {
+                                "$id": "#/properties/live/properties/bucketed/properties/buckets/items",
+                                "$ref": "#/definitions/bucket"
+                            }
+                        }
+                    }
+                },
+                "experiments": {
+                    "$id": "#/properties/live/properties/experiments",
+                    "type": "array",
+                    "title": "The Experiments Schema",
+                    "items": {
+                        "$id": "#/properties/live/properties/experiments/items",
+                        "$ref": "#/definitions/experiment"
+                    }
+                }
+            }
+        },
+        "draft": {
+            "$id": "#/properties/draft",
+            "type": "object",
+            "title": "Draft experiments",
+            "required": [
+                "bucketed",
+                "experiments"
+            ],
+            "properties": {
+                "bucketed": {
+                    "$id": "#/properties/live/properties/bucketed",
+                    "type": "object",
+                    "title": "Use bucketed experiments to run experiments on a subset of your traffic.",
+                    "required": [
+                        "min",
+                        "max",
+                        "buckets"
+                    ],
+                    "properties": {
+                        "min": {
+                            "$id": "#/properties/live/properties/bucketed/properties/min",
+                            "$ref": "#/definitions/percentage"
+                        },
+                        "max": {
+                            "$id": "#/properties/live/properties/bucketed/properties/max",
+                            "$ref": "#/definitions/percentage"
+                        },
+                        "buckets": {
+                            "$id": "#/properties/live/properties/bucketed/properties/buckets",
+                            "type": "array",
+                            "title": "The Buckets Schema",
+                            "items": {
+                                "$id": "#/properties/live/properties/bucketed/properties/buckets/items",
+                                "$ref": "#/definitions/bucket"
+                            }
+                        }
+                    }
+                },
+                "experiments": {
+                    "$id": "#/properties/live/properties/experiments",
+                    "type": "array",
+                    "title": "The Experiments Schema",
+                    "items": {
+                        "$id": "#/properties/live/properties/experiments/items",
+                        "$ref": "#/definitions/experiment"
+                    }
+                }
+            }
+        }
+    }
+}

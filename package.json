@@ -1,0 +1,27 @@
+{
+  "name": "variate-config",
+  "version": "1.0.0",
+  "description": "Variate configuration schema and example",
+  "main": "config.json",
+  "scripts": {
+    "validate": "ajv -s config.schema.json -d config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/variateapp/variate-config.git"
+  },
+  "keywords": [
+    "variate",
+    "multivariate",
+    "ab-testing"
+  ],
+  "author": "“Valentin <valentin@whatdafox.com> (http://twitter.com/valentinprngd)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/variateapp/variate-config/issues"
+  },
+  "homepage": "https://github.com/variateapp/variate-config#readme",
+  "devDependencies": {
+    "ajv-cli": "^3.0.0"
+  }
+}
