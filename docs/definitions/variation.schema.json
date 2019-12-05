@@ -8,7 +8,7 @@
     "description": "The variation object contains the variation ID, traffic allocation information and the list of components for this variation.",
     "required": [
         "id",
-        "traffic_allocation",
+        "trafficAllocation",
         "components"
     ],
     "properties": {
@@ -16,7 +16,7 @@
             "$ref": "https://variate.ca/definitions/id.json",
             "title": "Variation ID"
         },
-        "traffic_allocation": {
+        "trafficAllocation": {
             "$ref": "https://variate.ca/definitions/traffic.json"
         },
         "components": {
