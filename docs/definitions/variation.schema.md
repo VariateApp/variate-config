@@ -19,12 +19,12 @@ variation.
 
 # Variation Properties
 
-| Property                                  | Type     | Required     | Nullable | Defined by                                 |
-| ----------------------------------------- | -------- | ------------ | -------- | ------------------------------------------ |
-| [components](#components)                 | `object` | **Required** | No       | Variation (this schema)                    |
-| [id](#id)                                 | ID       | **Required** | No       | Variation (this schema)                    |
-| [traffic_allocation](#traffic_allocation) | Traffic  | **Required** | No       | Variation (this schema)                    |
-| `*`                                       | any      | Additional   | Yes      | this schema _allows_ additional properties |
+| Property                                | Type     | Required     | Nullable | Defined by                                 |
+| --------------------------------------- | -------- | ------------ | -------- | ------------------------------------------ |
+| [components](#components)               | `object` | **Required** | No       | Variation (this schema)                    |
+| [id](#id)                               | ID       | **Required** | No       | Variation (this schema)                    |
+| [trafficAllocation](#trafficallocation) | Traffic  | **Required** | No       | Variation (this schema)                    |
+| `*`                                     | any      | Additional   | Yes      | this schema _allows_ additional properties |
 
 ## components
 
@@ -58,14 +58,14 @@ variation.
 
 - [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
 
-## traffic_allocation
+## trafficAllocation
 
-`traffic_allocation`
+`trafficAllocation`
 
 - is **required**
 - type: Traffic
 - defined in this schema
 
-### traffic_allocation Type
+### trafficAllocation Type
 
 - [Traffic](traffic.schema.md) – `https://variate.ca/definitions/traffic.json`
