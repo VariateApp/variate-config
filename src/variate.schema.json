@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://variate.ca/config.schema.json",
+    "$id": "https://variate.ca/variate.schema.json",
     "type": "object",
     "meta:status": "beta",
     "meta:license": "MIT",

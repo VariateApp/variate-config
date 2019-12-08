@@ -1,7 +1,7 @@
 # Variate Schema
 
 ```
-https://variate.ca/config.schema.json
+https://variate.ca/variate.schema.json
 ```
 
 JSON Schema to define how the Variate config.json file should look like.

@@ -8,16 +8,16 @@
     "description": "Component ID along with its list of attributes.",
     "required": [
         "id",
-        "attributes"
+        "variables"
     ],
     "properties": {
         "id": {
             "$ref": "https://variate.ca/definitions/id.json",
             "title": "Component ID"
         },
-        "attributes": {
-            "$ref": "https://variate.ca/definitions/attribute.json",
-            "title": "Attributes object"
+        "variables": {
+            "$ref": "https://variate.ca/definitions/variable.json",
+            "title": "Variables object"
         }
     },
     "additionalProperties": false

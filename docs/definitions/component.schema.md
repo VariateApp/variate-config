@@ -14,28 +14,14 @@ Component ID along with its list of attributes.
 
 - Component `https://variate.ca/definitions/component.json`
   - [ID](id.schema.md) `https://variate.ca/definitions/id.json`
-  - [Attribute](attribute.schema.md) `https://variate.ca/definitions/attribute.json`
+  - [Variable](variable.schema.md) `https://variate.ca/definitions/variable.json`
 
 # Component Properties
 
-| Property                  | Type      | Required     | Nullable | Defined by              |
-| ------------------------- | --------- | ------------ | -------- | ----------------------- |
-| [attributes](#attributes) | Attribute | **Required** | No       | Component (this schema) |
-| [id](#id)                 | ID        | **Required** | No       | Component (this schema) |
-
-## attributes
-
-### Attributes object
-
-`attributes`
-
-- is **required**
-- type: Attribute
-- defined in this schema
-
-### attributes Type
-
-- [Attribute](attribute.schema.md) – `https://variate.ca/definitions/attribute.json`
+| Property                | Type     | Required     | Nullable | Defined by              |
+| ----------------------- | -------- | ------------ | -------- | ----------------------- |
+| [id](#id)               | ID       | **Required** | No       | Component (this schema) |
+| [variables](#variables) | Variable | **Required** | No       | Component (this schema) |
 
 ## id
 
@@ -50,3 +36,17 @@ Component ID along with its list of attributes.
 ### id Type
 
 - [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
+
+## variables
+
+### Variables object
+
+`variables`
+
+- is **required**
+- type: Variable
+- defined in this schema
+
+### variables Type
+
+- [Variable](variable.schema.md) – `https://variate.ca/definitions/variable.json`

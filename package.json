@@ -1,11 +1,12 @@
 {
   "name": "variate-config",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Variate configuration schema and example",
   "main": "config.json",
   "scripts": {
     "validate": "ajv -r 'src/definitions/**/*.json' -s src/variate.schema.json -d src/variate.json",
-    "docs": "jsonschema2md -d src/ -o docs/"
+    "docs": "jsonschema2md -d src/ -o docs/",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
