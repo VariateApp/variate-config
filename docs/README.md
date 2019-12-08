@@ -2,7 +2,7 @@
 
 ## /
 
-- [Variate](./variate.schema.md) – `https://variate.ca/config.schema.json` (Beta)
+- [Variate](./variate.schema.md) – `https://variate.ca/variate.schema.json` (Beta)
 
 ## /definitions/
 
