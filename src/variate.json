@@ -59,7 +59,7 @@
                         "components": {
                             "Hero": {
                                 "id": 25,
-                                "attributes": {
+                                "variables": {
                                     "backgroundImage": "https://placeimg.com/1000/500/animals"
                                 }
                             }
@@ -74,7 +74,7 @@
                         "components": {
                             "Hero": {
                                 "id": 25,
-                                "attributes": {
+                                "variables": {
                                     "backgroundImage": "https://placeimg.com/1000/500/arch"
                                 }
                             }
@@ -144,7 +144,7 @@
                         "components": {
                             "Hero": {
                                 "id": 25,
-                                "attributes": {
+                                "variables": {
                                     "headline": "Awesome control variation!"
                                 }
                             }
@@ -159,7 +159,7 @@
                         "components": {
                             "Hero": {
                                 "id": 25,
-                                "attributes": {
+                                "variables": {
                                     "headline": "Awesome variation 1!"
                                 }
                             }

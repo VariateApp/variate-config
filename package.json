@@ -5,7 +5,8 @@
   "main": "config.json",
   "scripts": {
     "validate": "ajv -r 'src/definitions/**/*.json' -s src/variate.schema.json -d src/variate.json",
-    "docs": "jsonschema2md -d src/ -o docs/"
+    "docs": "jsonschema2md -d src/ -o docs/",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
