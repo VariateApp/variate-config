@@ -8,12 +8,27 @@
     "description": "Component ID along with its list of attributes.",
     "required": [
         "id",
+        "variationId",
+        "experimentId",
+        "siteId",
         "variables"
     ],
     "properties": {
         "id": {
             "$ref": "https://variate.ca/definitions/id.json",
             "title": "Component ID"
+        },
+        "variationId": {
+            "$ref": "https://variate.ca/definitions/id.json",
+            "title": "Variation ID"
+        },
+        "experimentId": {
+            "$ref": "https://variate.ca/definitions/id.json",
+            "title": "Experiment ID"
+        },
+        "siteId": {
+            "$ref": "https://variate.ca/definitions/id.json",
+            "title": "Site ID"
         },
         "variables": {
             "$ref": "https://variate.ca/definitions/variable.json",

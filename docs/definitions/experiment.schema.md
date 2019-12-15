@@ -24,6 +24,7 @@ in this experiment.
 | [environment](#environment) | Environment | **Required** | No       |                                            | Experiment (this schema) |
 | [id](#id)                   | ID          | **Required** | No       |                                            | Experiment (this schema) |
 | [name](#name)               | `string`    | **Required** | No       | `""`                                       | Experiment (this schema) |
+| [siteId](#siteid)           | ID          | **Required** | No       |                                            | Experiment (this schema) |
 | [targeting](#targeting)     | `object`    | **Required** | No       |                                            | Experiment (this schema) |
 | [variations](#variations)   | `object`    | **Required** | No       |                                            | Experiment (this schema) |
 | `*`                         | any         | Additional   | Yes      | this schema _allows_ additional properties |
@@ -82,6 +83,20 @@ All instances must conform to this regular expression
 ```json
 "Homepage - Hero Banner"
 ```
+
+## siteId
+
+### Site ID
+
+`siteId`
+
+- is **required**
+- type: ID
+- defined in this schema
+
+### siteId Type
+
+- [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
 
 ## targeting
 

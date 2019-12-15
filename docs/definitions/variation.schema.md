@@ -22,7 +22,9 @@ variation.
 | Property                                | Type     | Required     | Nullable | Defined by                                 |
 | --------------------------------------- | -------- | ------------ | -------- | ------------------------------------------ |
 | [components](#components)               | `object` | **Required** | No       | Variation (this schema)                    |
+| [experimentId](#experimentid)           | ID       | **Required** | No       | Variation (this schema)                    |
 | [id](#id)                               | ID       | **Required** | No       | Variation (this schema)                    |
+| [siteId](#siteid)                       | ID       | **Required** | No       | Variation (this schema)                    |
 | [trafficAllocation](#trafficallocation) | Traffic  | **Required** | No       | Variation (this schema)                    |
 | `*`                                     | any      | Additional   | Yes      | this schema _allows_ additional properties |
 
@@ -44,6 +46,20 @@ variation.
 | -------- | ---- | -------- |
 
 
+## experimentId
+
+### Experiment ID
+
+`experimentId`
+
+- is **required**
+- type: ID
+- defined in this schema
+
+### experimentId Type
+
+- [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
+
 ## id
 
 ### Variation ID
@@ -55,6 +71,20 @@ variation.
 - defined in this schema
 
 ### id Type
+
+- [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
+
+## siteId
+
+### Site ID
+
+`siteId`
+
+- is **required**
+- type: ID
+- defined in this schema
+
+### siteId Type
 
 - [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
 

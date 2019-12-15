@@ -8,6 +8,7 @@
     "description": "The experiment object contains the experiment ID, name, status, targeting information and list of variations included in this experiment.",
     "required": [
         "id",
+        "siteId",
         "name",
         "environment",
         "targeting",
@@ -17,6 +18,10 @@
         "id": {
             "$ref": "https://variate.ca/definitions/id.json",
             "title": "Experiment ID"
+        },
+        "siteId": {
+            "$ref": "https://variate.ca/definitions/id.json",
+            "title": "Site ID"
         },
         "name": {
             "type": "string",
