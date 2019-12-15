@@ -13,7 +13,7 @@
                     ],
                     "exclude": []
                 },
-                "audiences": {
+                "segments": {
                     "and": [
                         {
                             "==": [
@@ -90,7 +90,7 @@
                     ],
                     "exclude": []
                 },
-                "audiences": {
+                "segments": {
                     "and": [
                         {
                             "==": [

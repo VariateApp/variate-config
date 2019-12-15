@@ -40,14 +40,14 @@
             "title": "Experiment Targeting Schema",
             "required": [
                 "views",
-                "audiences"
+                "segments"
             ],
             "properties": {
                 "views": {
                     "$ref": "https://variate.ca/definitions/views.json"
                 },
-                "audiences": {
-                    "$ref": "https://variate.ca/definitions/audiences.json"
+                "segments": {
+                    "$ref": "https://variate.ca/definitions/segments.json"
                 }
             }
         },

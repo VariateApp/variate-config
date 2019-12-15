@@ -112,21 +112,21 @@ All instances must conform to this regular expression
 
 `object` with following properties:
 
-| Property    | Type      | Required     |
-| ----------- | --------- | ------------ |
-| `audiences` | Audiences | **Required** |
-| `views`     | Views     | **Required** |
+| Property   | Type     | Required     |
+| ---------- | -------- | ------------ |
+| `segments` | Segments | **Required** |
+| `views`    | Views    | **Required** |
 
-#### audiences
+#### segments
 
-`audiences`
+`segments`
 
 - is **required**
-- type: Audiences
+- type: Segments
 
-##### audiences Type
+##### segments Type
 
-- [Audiences](audiences.schema.md) – `https://variate.ca/definitions/audiences.json`
+- [Segments](segments.schema.md) – `https://variate.ca/definitions/segments.json`
 
 #### views
 
