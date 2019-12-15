@@ -9,24 +9,37 @@ in this experiment.
 
 | Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                                   |
 | ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------ |
-| Can be instantiated | No         | Draft  | No           | Forbidden         | Permitted             | [definitions/experiment.schema.json](experiment.schema.json) |
+| Can be instantiated | No         | Stable | No           | Forbidden         | Permitted             | [definitions/experiment.schema.json](experiment.schema.json) |
 
 ## Schema Hierarchy
 
 - Experiment `https://variate.ca/definitions/experiment.json`
   - [ID](id.schema.md) `https://variate.ca/definitions/id.json`
-  - [Status](status.schema.md) `https://variate.ca/definitions/status.json`
+  - [Environment](status.schema.md) `https://variate.ca/definitions/environment.json`
 
 # Experiment Properties
 
-| Property                  | Type      | Required     | Nullable | Default                                    | Defined by               |
-| ------------------------- | --------- | ------------ | -------- | ------------------------------------------ | ------------------------ |
-| [id](#id)                 | ID        | **Required** | No       |                                            | Experiment (this schema) |
-| [name](#name)             | `string`  | **Required** | No       | `""`                                       | Experiment (this schema) |
-| [status](#status)         | Status    | **Required** | No       |                                            | Experiment (this schema) |
-| [targeting](#targeting)   | `object`  | **Required** | No       |                                            | Experiment (this schema) |
-| [variations](#variations) | Variation | **Required** | No       |                                            | Experiment (this schema) |
-| `*`                       | any       | Additional   | Yes      | this schema _allows_ additional properties |
+| Property                    | Type        | Required     | Nullable | Default                                    | Defined by               |
+| --------------------------- | ----------- | ------------ | -------- | ------------------------------------------ | ------------------------ |
+| [environment](#environment) | Environment | **Required** | No       |                                            | Experiment (this schema) |
+| [id](#id)                   | ID          | **Required** | No       |                                            | Experiment (this schema) |
+| [name](#name)               | `string`    | **Required** | No       | `""`                                       | Experiment (this schema) |
+| [siteId](#siteid)           | ID          | **Required** | No       |                                            | Experiment (this schema) |
+| [targeting](#targeting)     | `object`    | **Required** | No       |                                            | Experiment (this schema) |
+| [variations](#variations)   | `object`    | **Required** | No       |                                            | Experiment (this schema) |
+| `*`                         | any         | Additional   | Yes      | this schema _allows_ additional properties |
+
+## environment
+
+`environment`
+
+- is **required**
+- type: Environment
+- defined in this schema
+
+### environment Type
+
+- [Environment](status.schema.md) – `https://variate.ca/definitions/environment.json`
 
 ## id
 
@@ -71,17 +84,19 @@ All instances must conform to this regular expression
 "Homepage - Hero Banner"
 ```
 
-## status
+## siteId
 
-`status`
+### Site ID
+
+`siteId`
 
 - is **required**
-- type: Status
+- type: ID
 - defined in this schema
 
-### status Type
+### siteId Type
 
-- [Status](status.schema.md) – `https://variate.ca/definitions/status.json`
+- [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
 
 ## targeting
 
@@ -131,13 +146,13 @@ All instances must conform to this regular expression
 `variations`
 
 - is **required**
-- type: Variation
+- type: `object`
 - defined in this schema
 
 ### variations Type
 
-Array type: Variation
+`object` with following properties:
 
-All items must be of the type:
+| Property | Type | Required |
+| -------- | ---- | -------- |
 
-- [Variation](variation.schema.md) – `https://variate.ca/definitions/variation.json`

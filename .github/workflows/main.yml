@@ -1,0 +1,16 @@
+name: Variate Schema
+
+on: push
+
+jobs:
+  publish-npm:
+    name: "Validate"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm run validate

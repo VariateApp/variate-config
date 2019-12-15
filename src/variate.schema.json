@@ -7,103 +7,17 @@
     "title": "Variate",
     "description": "JSON Schema to define how the Variate config.json file should look like.",
     "required": [
-        "live",
-        "draft"
+        "experiments"
     ],
     "properties": {
-        "live": {
-            "$id": "#/properties/live",
+        "experiments": {
+            "$id": "#/properties/experiments",
             "type": "object",
-            "title": "Live experiments bucketed or audience-wide.",
-            "required": [
-                "bucketed",
-                "experiments"
-            ],
-            "properties": {
-                "bucketed": {
-                    "$id": "#/properties/live/properties/bucketed",
-                    "type": "object",
-                    "title": "Use bucketed experiments to run experiments on a subset of your traffic.",
-                    "required": [
-                        "min",
-                        "max",
-                        "buckets"
-                    ],
-                    "properties": {
-                        "min": {
-                            "$id": "#/properties/live/properties/bucketed/properties/min",
-                            "$ref": "https://variate.ca/definitions/percentage.json"
-                        },
-                        "max": {
-                            "$id": "#/properties/live/properties/bucketed/properties/max",
-                            "$ref": "https://variate.ca/definitions/percentage.json"
-                        },
-                        "buckets": {
-                            "$id": "#/properties/live/properties/bucketed/properties/buckets",
-                            "type": "array",
-                            "items": {
-                                "$id": "#/properties/live/properties/bucketed/properties/buckets/items",
-                                "$ref": "https://variate.ca/definitions/bucket.json"
-                            }
-                        }
-                    }
-                },
-                "experiments": {
-                    "$id": "#/properties/live/properties/experiments",
-                    "type": "array",
-                    "title": "Experiments List",
-                    "items": {
-                        "$id": "#/properties/live/properties/experiments/items",
-                        "$ref": "https://variate.ca/definitions/experiment.json"
-                    }
-                }
-            }
-        },
-        "draft": {
-            "$id": "#/properties/draft",
-            "type": "object",
-            "title": "Draft experiments",
-            "required": [
-                "bucketed",
-                "experiments"
-            ],
-            "properties": {
-                "bucketed": {
-                    "$id": "#/properties/live/properties/bucketed",
-                    "type": "object",
-                    "title": "Use bucketed experiments to run experiments on a subset of your traffic.",
-                    "required": [
-                        "min",
-                        "max",
-                        "buckets"
-                    ],
-                    "properties": {
-                        "min": {
-                            "$id": "#/properties/live/properties/bucketed/properties/min",
-                            "$ref": "https://variate.ca/definitions/percentage.json"
-                        },
-                        "max": {
-                            "$id": "#/properties/live/properties/bucketed/properties/max",
-                            "$ref": "https://variate.ca/definitions/percentage.json"
-                        },
-                        "buckets": {
-                            "$id": "#/properties/live/properties/bucketed/properties/buckets",
-                            "type": "array",
-                            "items": {
-                                "$id": "#/properties/live/properties/bucketed/properties/buckets/items",
-                                "$ref": "https://variate.ca/definitions/bucket.json"
-                            }
-                        }
-                    }
-                },
-                "experiments": {
-                    "$id": "#/properties/live/properties/experiments",
-                    "type": "array",
-                    "title": "The Experiments Schema",
-                    "items": {
-                        "$id": "#/properties/live/properties/experiments/items",
-                        "$ref": "https://variate.ca/definitions/experiment.json"
-                    }
+            "title": "Experiments List",
+            "patternProperties": {
+                "[a-zA-Z0-9]+": {
+                    "$id": "#/properties/live/properties/experiments/experiment",
+                    "$ref": "https://variate.ca/definitions/experiment.json"
                 }
             }
         }

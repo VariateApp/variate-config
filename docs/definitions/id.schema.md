@@ -10,8 +10,12 @@ Identifier type used within Variate.
 | ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | -------------------------------------------- |
 | Can be instantiated | No         | Stable | No           | Forbidden         | Permitted             | [definitions/id.schema.json](id.schema.json) |
 
-## ID Example
+## ID Examples
 
 ```json
-999
+"C74lbTFFVUk6Zj76ysMK"
+```
+
+```json
+"nM3ntXmMj2dX86xnrvVK"
 ```

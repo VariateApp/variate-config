@@ -1,15 +1,15 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://variate.ca/definitions/status.json",
+    "$id": "https://variate.ca/definitions/environment.json",
     "type": "string",
     "meta:status": "stable",
     "meta:license": "MIT",
-    "title": "Status",
-    "description": "Represent the status of an experiment.",
+    "title": "Environment",
+    "description": "Represent the environment of an experiment.",
     "default": "",
-    "examples": [
-        "live",
-        "draft"
+    "enum": [
+        "production",
+        "development"
     ],
     "pattern": "^(.*)$"
 }

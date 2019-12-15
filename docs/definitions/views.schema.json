@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/definitions/views.json",
     "type": "object",
-    "meta:status": "draft",
+    "meta:status": "stable",
     "meta:license": "MIT",
     "title": "Views",
     "description": "The views object contains two arrays: include and exclude. Each array contains a list of urls or regular expressions to include or exclude from targeting.",

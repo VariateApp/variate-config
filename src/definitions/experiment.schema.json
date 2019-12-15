@@ -2,14 +2,15 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/definitions/experiment.json",
     "type": "object",
-    "meta:status": "draft",
+    "meta:status": "stable",
     "meta:license": "MIT",
     "title": "Experiment",
     "description": "The experiment object contains the experiment ID, name, status, targeting information and list of variations included in this experiment.",
     "required": [
         "id",
+        "siteId",
         "name",
-        "status",
+        "environment",
         "targeting",
         "variations"
     ],
@@ -17,6 +18,10 @@
         "id": {
             "$ref": "https://variate.ca/definitions/id.json",
             "title": "Experiment ID"
+        },
+        "siteId": {
+            "$ref": "https://variate.ca/definitions/id.json",
+            "title": "Site ID"
         },
         "name": {
             "type": "string",
@@ -27,8 +32,8 @@
             ],
             "pattern": "^(.*)$"
         },
-        "status": {
-            "$ref": "https://variate.ca/definitions/status.json"
+        "environment": {
+            "$ref": "https://variate.ca/definitions/environment.json"
         },
         "targeting": {
             "type": "object",
@@ -47,10 +52,13 @@
             }
         },
         "variations": {
-            "type": "array",
+            "type": "object",
             "title": "Experiment Variations Schema",
-            "items": {
-                "$ref": "https://variate.ca/definitions/variation.json"
+            "patternProperties": {
+                "[a-zA-Z0-9]+": {
+                    "$id": "#/properties/experiments/experiment/variations",
+                    "$ref": "https://variate.ca/definitions/variation.json"
+                }
             }
         }
     },

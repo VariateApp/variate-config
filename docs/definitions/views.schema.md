@@ -9,7 +9,7 @@ include or exclude from targeting.
 
 | Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                         |
 | ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | -------------------------------------------------- |
-| Can be instantiated | No         | Draft  | No           | Forbidden         | Forbidden             | [definitions/views.schema.json](views.schema.json) |
+| Can be instantiated | No         | Stable | No           | Forbidden         | Forbidden             | [definitions/views.schema.json](views.schema.json) |
 
 # Views Properties
 
