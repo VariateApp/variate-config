@@ -8,7 +8,7 @@ Component ID along with its list of attributes.
 
 | Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                                 |
 | ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
-| Can be instantiated | No         | Draft  | No           | Forbidden         | Forbidden             | [definitions/component.schema.json](component.schema.json) |
+| Can be instantiated | No         | Stable | No           | Forbidden         | Forbidden             | [definitions/component.schema.json](component.schema.json) |
 
 ## Schema Hierarchy
 

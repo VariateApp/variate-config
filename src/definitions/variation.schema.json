@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/definitions/variation.json",
     "type": "object",
-    "meta:status": "draft",
+    "meta:status": "stable",
     "meta:license": "MIT",
     "title": "Variation",
     "description": "The variation object contains the variation ID, traffic allocation information and the list of components for this variation.",
@@ -22,9 +22,13 @@
         "components": {
             "type": "object",
             "title": "Component list",
-            "additionalProperties": {
-                "$ref": "https://variate.ca/definitions/component.json"
-            }
+            "patternProperties": {
+                "[a-zA-Z0-9]+": {
+                    "$id": "#/properties/experiments/experiment/variations/variation/components",
+                    "$ref": "https://variate.ca/definitions/component.json"
+                }
+            },
+            "additionalProperties": true
         }
     },
     "additionalProperties": true

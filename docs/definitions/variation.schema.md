@@ -9,7 +9,7 @@ variation.
 
 | Abstract            | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In                                                 |
 | ------------------- | ---------- | ------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
-| Can be instantiated | No         | Draft  | No           | Forbidden         | Permitted             | [definitions/variation.schema.json](variation.schema.json) |
+| Can be instantiated | No         | Stable | No           | Forbidden         | Permitted             | [definitions/variation.schema.json](variation.schema.json) |
 
 ## Schema Hierarchy
 

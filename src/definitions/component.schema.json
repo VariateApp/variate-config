@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://variate.ca/definitions/component.json",
-    "meta:status": "draft",
+    "meta:status": "stable",
     "meta:license": "MIT",
     "type": "object",
     "title": "Component",
