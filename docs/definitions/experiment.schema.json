@@ -14,6 +14,9 @@
         "targeting",
         "variations"
     ],
+    "optional": [
+        "manualQualification"
+    ],
     "properties": {
         "id": {
             "$ref": "https://variate.ca/definitions/id.json",
@@ -34,6 +37,11 @@
         },
         "environment": {
             "$ref": "https://variate.ca/definitions/environment.json"
+        },
+        "manualQualification": {
+            "type": "boolean",
+            "title": "If set to true, this experiment will not trigger any qualification event",
+            "default": false
         },
         "targeting": {
             "type": "object",

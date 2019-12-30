@@ -19,15 +19,16 @@ in this experiment.
 
 # Experiment Properties
 
-| Property                    | Type        | Required     | Nullable | Default                                    | Defined by               |
-| --------------------------- | ----------- | ------------ | -------- | ------------------------------------------ | ------------------------ |
-| [environment](#environment) | Environment | **Required** | No       |                                            | Experiment (this schema) |
-| [id](#id)                   | ID          | **Required** | No       |                                            | Experiment (this schema) |
-| [name](#name)               | `string`    | **Required** | No       | `""`                                       | Experiment (this schema) |
-| [siteId](#siteid)           | ID          | **Required** | No       |                                            | Experiment (this schema) |
-| [targeting](#targeting)     | `object`    | **Required** | No       |                                            | Experiment (this schema) |
-| [variations](#variations)   | `object`    | **Required** | No       |                                            | Experiment (this schema) |
-| `*`                         | any         | Additional   | Yes      | this schema _allows_ additional properties |
+| Property                                    | Type        | Required     | Nullable | Default                                    | Defined by               |
+| ------------------------------------------- | ----------- | ------------ | -------- | ------------------------------------------ | ------------------------ |
+| [environment](#environment)                 | Environment | **Required** | No       |                                            | Experiment (this schema) |
+| [id](#id)                                   | ID          | **Required** | No       |                                            | Experiment (this schema) |
+| [manualQualification](#manualqualification) | `boolean`   | Optional     | No       | `false`                                    | Experiment (this schema) |
+| [name](#name)                               | `string`    | **Required** | No       | `""`                                       | Experiment (this schema) |
+| [siteId](#siteid)                           | ID          | **Required** | No       |                                            | Experiment (this schema) |
+| [targeting](#targeting)                     | `object`    | **Required** | No       |                                            | Experiment (this schema) |
+| [variations](#variations)                   | `object`    | **Required** | No       |                                            | Experiment (this schema) |
+| `*`                                         | any         | Additional   | Yes      | this schema _allows_ additional properties |
 
 ## environment
 
@@ -54,6 +55,21 @@ in this experiment.
 ### id Type
 
 - [ID](id.schema.md) – `https://variate.ca/definitions/id.json`
+
+## manualQualification
+
+### If set to true, this experiment will not trigger any qualification event
+
+`manualQualification`
+
+- is optional
+- type: `boolean`
+- default: `false`
+- defined in this schema
+
+### manualQualification Type
+
+`boolean`
 
 ## name
 
