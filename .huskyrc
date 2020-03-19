@@ -1,6 +1,6 @@
 {
     "hooks": {
         "commit-msg": "commitlint -e $GIT_PARAMS",
-        "pre-commit": "npm run validate && npm run docs"
+        "pre-commit": "npm run validate && npm run docs && git add docs/"
     }
 }
