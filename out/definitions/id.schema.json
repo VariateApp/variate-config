@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://variate.ca/definitions/id.json","type":"string","meta:status":"stable","meta:license":"MIT","title":"ID","description":"Identifier type used within Variate.","examples":["C74lbTFFVUk6Zj76ysMK","nM3ntXmMj2dX86xnrvVK"]}

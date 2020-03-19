@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://variate.ca/definitions/segments.json","meta:status":"stable","meta:license":"MIT","type":"object","title":"Segments","description":"Segments are defined using JSON logic (see http://jsonlogic.com/ for reference).","additionalProperties":true}
