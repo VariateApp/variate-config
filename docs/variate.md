@@ -17,9 +17,26 @@ JSON Schema to define how the Variate config.json file should look like.
 
 # Variate Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                            |
-| :-------------------------- | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------- |
-| [experiments](#experiments) | `object` | Required | cannot be null | [Variate](variate-properties-experiments-list.md "\#/properties/experiments#/properties/experiments") |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                |
+| :-------------------------- | -------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------- |
+| [siteId](#siteId)           | `string` | Required | cannot be null | [Variate](variate-properties-site-id.md "https&#x3A;//variate.ca/variate.schema.json#/properties/siteId") |
+| [experiments](#experiments) | `object` | Required | cannot be null | [Variate](variate-properties-experiments-list.md "\#/properties/experiments#/properties/experiments")     |
+
+## siteId
+
+
+
+
+`siteId`
+
+-   is required
+-   Type: `string` ([Site ID](variate-properties-site-id.md))
+-   cannot be null
+-   defined in: [Variate](variate-properties-site-id.md "https&#x3A;//variate.ca/variate.schema.json#/properties/siteId")
+
+### siteId Type
+
+`string` ([Site ID](variate-properties-site-id.md))
 
 ## experiments
 

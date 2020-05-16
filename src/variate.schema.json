@@ -7,9 +7,14 @@
     "title": "Variate",
     "description": "JSON Schema to define how the Variate config.json file should look like.",
     "required": [
+        "siteId",
         "experiments"
     ],
     "properties": {
+        "siteId": {
+            "type": "string",
+            "title": "Site ID"
+        },
         "experiments": {
             "$id": "#/properties/experiments",
             "type": "object",
