@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/variateapp/variate-config/compare/v4.0.0...v4.1.0) (2020-05-16)
+
+
+### Features
+
+* add site ID at root level ([a5b15a8](https://github.com/variateapp/variate-config/commit/a5b15a8ee515b8b4667ce33d7a9fb68b3ed36b2c))
+* add site ID at root level ([3e7afc8](https://github.com/variateapp/variate-config/commit/3e7afc85893f49c1a456d2be86076c168edeebae))
+
 ## [4.0.0](https://github.com/variateapp/variate-config/compare/v3.0.0...v4.0.0) (2019-12-30)
 
 
