@@ -1,11 +1,11 @@
-![GitHub package.json version](https://img.shields.io/github/package-json/v/VariateApp/variate-schema)
-[![Actions Status](https://github.com/VariateApp/variate-schema/workflows/Validate/badge.svg)](https://github.com/VariateApp/variate-schema/actions)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/VariateHQ/variate-schema)
+[![Actions Status](https://github.com/VariateHQ/variate-schema/workflows/Validate/badge.svg)](https://github.com/VariateHQ/variate-schema/actions)
 
 # Variate Schema
 
 This repository tracks changes related to the `variate.json` schema file to use with Variate.
 
-> [See documentation] (https://github.com/VariateApp/variate-schema/tree/master/docs)
+> [See documentation] (https://github.com/VariateHQ/variate-schema/tree/master/docs)
 
 ## Installation
 
